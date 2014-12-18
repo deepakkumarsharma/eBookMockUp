@@ -4,75 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="stylesheets/screen.css" media="screen,projection" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/mobileVieS.css" />
+    <script src="scrpts/modernizr.custom.js"></script>
     <title>High Rise Buildings</title>
 </head>
 <body>
-
-<header id="header" class="header header--fixed hide-from-print" role="banner">
-<div class="container" >    
-    <nav id="nav" class="nav-wrapper" role="navigation">
-        <ul class="nav nav--main">
-            <li class="nav__item ">
-                <a class="header__link subdued" href="#">
-                    <span aria-hidden="true" class="icon icon--github"></span>
-                    <span class="complimentary push--left">Home</span>
-                </a>
-            </li>
-            <li class="nav__item ">
-                <a class="header__link subdued" href="#">
-                    <span aria-hidden="true" class="icon icon--twitter"></span>
-                    <span class="complimentary push--left">Lesson</span>
-                </a>
-            </li>
-            <li class="nav__item ">
-                <a class="header__link subdued" href="#">
-                    <span aria-hidden="true" class="icon icon--twitter"></span>
-                    <span class="complimentary push--left">Test</span>
-                </a>
-            </li>
-            <li class="nav__item ">
-                <a class="header__link subdued" href="http://www.twitter.com/WickyNilliams">
-                    <span aria-hidden="true" class="icon icon--twitter"></span>
-                    <span class="complimentary push--left">Break</span>
-                </a>
-            </li>                
-        </ul>
+<div class="container" id="main_container"> 
+    <header class="head" id="header">
+    <nav class="navbar" id="main_nav">
+    <ul class="unlist" id="unoderedlist">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Form</a></li>
+        <li><a href="#">Sign-in</a></li>
+    </ul>
+    <nav id="bt-menu" class="bt-menu">
+    <a href="#" class="bt-menu-trigger"><span>Menu</span></a>   
+    <ul class="unlist1">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Form</a></li>
+        <li><a href="#">Sign-in</a></li>
+    </ul>
     </nav>
-    <a href="http://wicky.nillia.ms/headroom.js/" class="brand header__link">
-        <b class="brand__forename">Headroom</b><b class="brand__surname">.js</b>
-    </a>
+    </nav>      
+    </header>  <!-- Header Over  -->
+
+<!-- Main -->
+
+<div class="landing-image">
+    <div class="wrapper" id="center_pic_and_stuff">
+        <div class="bigpicture">   
+            <div class="layer">
+                <h2 class="main-heading">High Rise Buildings</h2><br><br>
+                <h3 class="tagline"><span class="tagline1">Build Visions. </span><span class="tagline2">Create Reality</span></h3>
+            </div>                                              
+        </div>
+    </div>
+</div> 
+
 </div>
-</header>
 
-
-
-<link rel="stylesheet" href="stylesheets/header.css">
-<script src="scrpts/header.js"></script>
-<script>
-    (function() {
-    var header = new Headroom(document.querySelector("#header"), {
-        tolerance: 5,
-        offset : 205,
-        classes: {
-          initial: "animated",
-          pinned: "swingInX",
-          unpinned: "swingOutX"
-        }
-    });
-    header.init();
-
-    var bttHeadroom = new Headroom(document.getElementById("btt"), {
-        tolerance : 0,
-        offset : 500,
-        classes : {
-            initial : "slide",
-            pinned : "slide--reset",
-            unpinned : "slide--down"
-        }
-    });
-    bttHeadroom.init();
-}());
-</script>
 
 </body>
+<script src="scrpts/classie.js"></script>
+<script src="scrpts/borderMenu.js"></script>
 </html>

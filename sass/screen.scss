@@ -5,36 +5,188 @@
 /** Color Start 
  */
 
+$black:#222;
+$lessblack:#333;
+$lesserblack:#444;
+$offwhite:#fafafa;
+$white: #FFFFFF;
+$green: #0FEB63;
+
 /** Color End 
  */
 
 /** Mixins Start 
  */
 
-@mixin respond-to($media) {
+@mixin breakpoint($media) {
     @if $media == alpha {
-        @media only screen and (max-width: 640px) { @content; }
+        @media only screen and (max-width: 320px) { @content; }
     } @else if $media == beta {
-        @media only screen and (min-width: 641px) and (max-width: 1024px) { @content; }
+        @media only screen and (min-width: 321px) and (max-width: 640px) { @content; }
     } @else if $media == gamma {
-        @media only screen and (min-width: 1025px) and (max-width: 1440px) { @content; }
+        @media only screen and (min-width: 641px) and (max-width: 1024px) { @content; }
     } @else if $media == delta {
+        @media only screen and (min-width: 1025px) and (max-width: 1440px) { @content; }
+    } @else if $media == epsilon {
         @media only screen and (min-width: 1441px) and (max-width: 1920px) { @content; }
-    }
+    }    
 }
 
 /** Mixins End 
  */
 
-/** Header 
+.head {
+    background:$black;
+    width:100%;
+    min-height:50px;
+    top:0;
+    z-index:1100;
+    position:absolute;
+    box-shadow: 0px 2px 3px $lessblack;
+    @include breakpoint(alpha) { position:absolute;}
+    // @include single-box-shadow($lessblack,0px,2px,3px);
+}
+
+/**** Header End *****/
+
+.navbar {
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+    .unlist {
+        li {
+            float:left;
+            width:18.5%;
+            text-align:center;
+            line-height:50px;
+            font-size:1.6rem;
+            border-bottom:2px solid $black;
+            &:hover{border-bottom:2px solid $green;}
+            @include breakpoint(gamma) {font-size:1.4rem; float:right; width:136px;}
+            @include breakpoint(beta) {font-size:1.3rem; width:33%;}
+            @include breakpoint(alpha) {display:none;}
+        }
+    }
+}
+
+.bt-menu {
+    font-size:1.6rem;
+    line-height:50px;
+    display:none;
+    border:none;
+    @include breakpoint(alpha){display:block;}
+} 
+
+.icons {
+    width:16px;
+}
+
+/** End
  */
-.header {
-	background:#000;
-	width:100%;
-	min-height:50px;
-	top:0;
-	z-index:1100;
-	position:fixed;
-}	
-/** Header End 
+
+/** Decorations Start
+ */
+
+a {
+   text-decoration:none;
+    color:white;
+    &:hover{@include single-text-shadow(1px,1px);}
+}
+
+html {
+   font-size:62.5%;
+    height: 100%
+}
+
+body {
+    font-family:'Open Sans', sans-serif;
+    font-size:1.6rem;
+    @include breakpoint(alpha){overflow-x:hidden;}
+}
+
+*:focus {
+    outline: 0;
+}
+
+::selection {
+    background-color: $black;
+    color:$white;
+}
+
+::-moz-selection {
+    background-color: $black;
+    color:$white;
+}
+
+.quote {
+    font-size:1.6rem;
+    color:$white;
+}
+
+/** Decoration End
+ */
+
+/** slide1 
+ */
+
+.landing-image {
+    color:$white;
+    @include transition-property(all);
+    @include border-radius; 
+    .wrapped {
+        margin:auto;
+    }
+    .bigpicture {
+        width:100%;
+        height:100%;
+        position:fixed;
+        display:block;
+        background-image:url("../tasveer/landing.jpg");
+        background-repeat:no-repeat;
+        background-position:center; 
+        @include background-size(cover);
+        .layer {
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5);
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .main-heading {
+                color:$white;
+                text-align:center;
+                font-weight:400; 
+                @include breakpoint(alpha){padding-top:40rem; font-size:3.3rem;}
+                @include breakpoint(beta){padding-top:38rem; font-size:4rem;}
+                @include breakpoint(gamma){padding-top:35rem; font-size:7rem;}
+                @include breakpoint(delta){padding-top:33.7rem; font-size:9.5rem;}
+                @include breakpoint(epsilon){padding-top:33rem; font-size:10.5rem;}                
+            }
+            .tagline {
+                text-align:center; 
+                .tagline1 {
+                    color: $white;
+                    font-weight:400;
+                    @include breakpoint(alpha){font-size:1.9rem;}
+                    @include breakpoint(beta){font-size:2.8rem;}
+                    @include breakpoint(gamma){font-size:3.8rem;}
+                    @include breakpoint(delta){font-size:4.5rem;}
+                    @include breakpoint(epsilon){font-size:5.5rem;}
+                }
+                .tagline2 {
+                    color: $green;
+                    font-weight:400;
+                    @include breakpoint(alpha){font-size:1.9rem;}
+                    @include breakpoint(beta){font-size:2rem;}
+                    @include breakpoint(gamma){font-size:3.8rem;}
+                    @include breakpoint(delta){font-size:4.5rem;}
+                    @include breakpoint(epsilon){font-size:5.5rem;}
+                }                
+            }   
+        }        
+    }
+}
+
+/** slide1 
  */
