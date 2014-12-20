@@ -1,5 +1,6 @@
 @import "compass/reset";
 @import "compass/css3";
+@import "compass/typography";
 @import "susy";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,300);
 
@@ -24,11 +25,10 @@ $grey: #F0F0F0;
  */
 
 $landing-image: "../tasveer/landing.jpg";
-$zoom : "../tasveer/zoom.jpg";
-$content: "../tasveer/flip.jpg";
-$flip : "../tasveer/flip.jpg";
-$keys : "../tasveer/keys.jpg";
-$slide-3-bg : "../tasveer/bg3.jpg";
+$zoom : "../tasveer/zoom.png";
+$content: "../tasveer/content.png";
+$flip : "../tasveer/flip.png";
+$slide-3-bg : "../tasveer/slide4.jpg";
 
 /** Images End
  */
@@ -88,6 +88,12 @@ body {
     margin: 0px auto 50px;
 }
 
+.hrLine {
+    display: block;
+    width: 35px;
+    margin: 25px auto;
+    border: 2px solid $rose;    
+}
 /** Decorations
  */
 
@@ -181,30 +187,30 @@ header {
 
 
 .site1 {
-    border-bottom:1px dashed $black;
+    // border-bottom:1px dashed $black;
     padding: 10em 0;
     text-align: center;
 }
 
 .site2 {
-	border-bottom:1px dashed $black;
+	// border-bottom:1px dashed $black;
     // padding: 10em 0;
-    background: url($slide-3-bg) repeat;
+    // background: url($slide-3-bg) repeat;
     .head {
         background-color: $black;
         height:7rem;
         .headHeading {
             font-size: 3rem;
             text-align: center;
-            font-weight: 400;
-            color: $green;
+            font-weight: 200;
+            color: $rose;
             padding-top: 1.5rem;
         }
     }
     main {
         padding: 3.5em 0;
         @include container(90%);
-        background: url($slide-3-bg) repeat;
+        // background: url($slide-3-bg) repeat;
         .icon1 {
             @include span(4 of 12);
             text-align: center;
@@ -215,14 +221,15 @@ header {
                 @extend .circular-image;
             }
             .heading1 {
-                font-size: 2.2rem;
-                font-weight: 400;
-                color: $green;
+                padding-bottom: 1rem;
+                font-size: 1.7rem;
+                font-weight: 200;
+                color: $rose;
             }
             .description1 {
-                padding-top: 2rem;
-                color: $offwhite;
-                @include word-break(break-all);
+                padding-top: 0.7rem;
+                color: $lessblack;
+                @include word-break(normal);
                 @include hyphens;                
             }            
         }
@@ -230,20 +237,21 @@ header {
             @include span(4 at 5 of 12);
             text-align: center;
             .image2 {
-                background: url($keys) no-repeat center;
+                background: url($flip) no-repeat center;
                 background-position: center;
                 @include background-size(cover);
                 @extend .circular-image;
             }
             .heading2 {
-                font-size: 2.2rem;
-                font-weight: 400;
-                color: $green;
+                padding-bottom: 1rem;                
+                font-size: 1.7rem;
+                font-weight: 200;
+                color: $rose;
             }
             .description2 {
-                padding-top: 2rem;
-                color: $offwhite;
-                @include word-break(break-all);
+                padding-top: 0.7rem;
+                color: $lessblack;
+                @include word-break(normal);
                 @include hyphens;                
             }                        
         }
@@ -251,20 +259,21 @@ header {
             @include span(4 at 9 of 12);
             text-align: center;
             .image3 {
-                background: url($flip) no-repeat center;
+                background: url($content) no-repeat center;
                 background-position: center;
                 @include background-size(cover);
                 @extend .circular-image;                
             }
             .heading3 {
-                font-size: 2.2rem;
-                font-weight: 400;
-                color: $green;
+                padding-bottom: 1rem;                
+                font-size: 1.7rem;
+                font-weight: 200;
+                color: $rose;
             }
             .description3 {
-                padding-top: 2rem;
-                color: $offwhite;
-                @include word-break(break-all);
+                padding-top: 0.7rem;
+                color: $lessblack;
+                @include word-break(normal);
                 @include hyphens;                
             }            
         }                 
@@ -272,35 +281,75 @@ header {
 }
 
 .site3 {
-    border-bottom:1px dashed $black;
-    
-    background-color: $grey;
-    .thanksgiving {
-        @include container(90%);
-        background-color: $grey;
-        .credit {
-            text-align: center;
-            font-size: 5rem;
-            font-weight: 200;
-            color: $green;
-            padding: 2rem;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: url($slide-3-bg) center no-repeat;
+    @include background-size(cover);
+    background-attachment:fixed;    
+    .slide3layer {
+        background: rgb(38, 41, 48);
+        background: rgba(38, 41, 48, 0.5);         
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 1;      
+        .slide3description {
+            @include container(80%);
+            .thanks {
+                font-weight: 200;
+                color: #FAFAFA;
+                text-align: center;
+                text-decoration: none;
+                padding: 4rem !important;
+                font-size: 4rem;
+            }
+            .thanksdescription {
+                font-weight: 200;
+                color: #FAFAFA;
+                text-align:center;   
+                font-size: 1.4rem;             
+            }
+            .version {
+                text-align:left;
+                .edition{
+                    font-weight: 200;
+                    text-align: left;
+                    color: $offwhite;
+                    padding-top: 3rem;
+                    padding-bottom: 1.5rem;
+                }
+                .list {
+                    font-weight: 200;
+                    text-align: left;                    
+                    color: $offwhite;
+                    line-height: 2rem;
+                }
+            }
+            .hoverMe {
+                text-align: center;
+                font-size: 200;
+                color: $offwhite;
+                font-size: 3rem;
+                padding-bottom: 2rem;
+            }
+            .button {
+                text-align:center;
+                font-size: 2.1rem;
+                background: transparent;
+                border: 1px solid;
+                width: 275px;
+                height: 63px;
+                border-radius: 3px;
+                color: white;
+                margin : 2px auto 2px -21px;    
+                curson: pointer;  
+                @include transition(background 0.50s ease-in-out);
+                &:hover {
+                    background: $black;
+                }     
+            }
         }
-        .creditQuote {
-            font-size: 1.6rem;
-            font-weight: 200;
-            text-align: center;
-            @include word-break(break-all);
-            @include hyphens; 
-        }
-        .exploreBook {
-            padding-top:2rem;
-            text-align: center;
-            font-size: 5rem;
-            font-weight: 200;
-            color: $green;
-            padding: 2rem;
-        }
-    }    
+    }
 }
 
 footer {
