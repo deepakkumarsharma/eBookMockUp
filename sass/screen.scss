@@ -13,7 +13,8 @@ $lesserblack:#444;
 $offwhite:#fafafa;
 $white: #FFFFFF;
 $green: #0FEB63;
-$rose: #F24153;
+$rose: #FF3B5B;
+$lessrose: #F24153;
 $purple: #9A65CD;
 $blue: #5CA1E5;
 $grey: #F0F0F0;
@@ -86,6 +87,8 @@ body {
     vertical-align: middle;
     position: relative;
     margin: 0px auto 50px;
+    @include breakpoint(alpha){height:129px; width:129px;}
+    @include breakpoint(beta){height:153px; width:147px;}
 }
 
 .hrLine {
@@ -99,19 +102,19 @@ body {
 
 
 header {
-	height: 100%;
-  	position: relative;
-  	overflow: hidden;
-  	background: url($landing-image) center no-repeat;
-  	@include background-size(cover);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: url($landing-image) center no-repeat;
+    @include background-size(cover);
   
-  	.content {
-	    background: rgb(0, 0, 0);
-	    background: rgba(0, 0, 0, 0.5);  		
-    	position: absolute;
-    	top: 0; left: 0; right: 0; bottom: 0;
-    	z-index: 1;
-  	}
+    .content {
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);         
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 1;
+    }
   
     .main-heading {
         color:$white;
@@ -135,7 +138,7 @@ header {
             @include breakpoint(epsilon){font-size:6.2rem;}
         }
         .tagline2 {
-            color: $green;
+            color: $rose;
             font-weight:400;
             @include breakpoint(alpha){font-size:1.6rem;}
             @include breakpoint(beta){font-size:2.7rem;}
@@ -175,7 +178,7 @@ header {
             @include breakpoint(epsilon){font-size:2rem;}
         }
         .authName {
-            color: $green;   
+            color: $rose;   
             @include breakpoint(alpha){padding-top:2.2rem; font-size:0.9rem;}
             @include breakpoint(beta){font-size:1.2rem;}
             @include breakpoint(gamma){font-size:1.5rem;}
@@ -187,32 +190,33 @@ header {
 
 
 .site1 {
-    // border-bottom:1px dashed $black;
-    padding: 10em 0;
-    text-align: center;
+// content pending
 }
 
 .site2 {
-	// border-bottom:1px dashed $black;
-    // padding: 10em 0;
-    // background: url($slide-3-bg) repeat;
     .head {
         background-color: $black;
         height:7rem;
         .headHeading {
-            font-size: 3rem;
             text-align: center;
             font-weight: 200;
             color: $rose;
             padding-top: 1.5rem;
+            @include breakpoint(alpha){font-size:2rem}
+            @include breakpoint(beta){font-size:2rem}
+            @include breakpoint(gamma){font-size:2.4rem}
+            @include breakpoint(delta){font-size:2.8rem}
+            @include breakpoint(epsilon){font-size:3rem}
         }
     }
     main {
         padding: 3.5em 0;
         @include container(90%);
-        // background: url($slide-3-bg) repeat;
+        @include breakpoint(alpha){@include container(70%);}
         .icon1 {
             @include span(4 of 12);
+            @include breakpoint(alpha){@include span(12 of 12); padding-bottom:1.5rem;}
+            @include breakpoint(beta){@include span(12 of 12); padding-bottom:1.5rem;}
             text-align: center;
             .image1 {
                 background: url($zoom) no-repeat center;
@@ -225,16 +229,19 @@ header {
                 font-size: 1.7rem;
                 font-weight: 200;
                 color: $rose;
+                @include breakpoint(alpha){font-size: 1rem;}
             }
             .description1 {
                 padding-top: 0.7rem;
                 color: $lessblack;
-                @include word-break(normal);
-                @include hyphens;                
+                text-align:left;
+                @include breakpoint(alpha){font-size: 0.8rem;}
             }            
         }
         .icon2 {
             @include span(4 at 5 of 12);
+            @include breakpoint(alpha){@include span(12 of 12); padding-bottom:1.5rem;}
+            @include breakpoint(beta){@include span(12 of 12); padding-bottom:1.5rem;}
             text-align: center;
             .image2 {
                 background: url($flip) no-repeat center;
@@ -247,34 +254,38 @@ header {
                 font-size: 1.7rem;
                 font-weight: 200;
                 color: $rose;
+                @include breakpoint(alpha){font-size: 1rem; }
             }
             .description2 {
                 padding-top: 0.7rem;
                 color: $lessblack;
-                @include word-break(normal);
-                @include hyphens;                
+                text-align:left;
+                @include breakpoint(alpha){font-size: 0.8rem;}             
             }                        
         }
         .icon3 {
             @include span(4 at 9 of 12);
+            @include breakpoint(alpha){@include span(12 of 12); padding-bottom:1.5rem;}
+            @include breakpoint(beta){@include span(12 of 12); padding-bottom:1.5rem;}
             text-align: center;
             .image3 {
                 background: url($content) no-repeat center;
                 background-position: center;
                 @include background-size(cover);
-                @extend .circular-image;                
+                @extend .circular-image; 
             }
             .heading3 {
                 padding-bottom: 1rem;                
                 font-size: 1.7rem;
                 font-weight: 200;
                 color: $rose;
+                @include breakpoint(alpha){font-size: 1rem;}
             }
             .description3 {
                 padding-top: 0.7rem;
                 color: $lessblack;
-                @include word-break(normal);
-                @include hyphens;                
+                text-align:left; 
+                @include breakpoint(alpha){font-size: 0.8rem;}
             }            
         }                 
     }
@@ -296,33 +307,80 @@ header {
         .slide3description {
             @include container(80%);
             .thanks {
-                font-weight: 200;
-                color: #FAFAFA;
+                color: $offwhite;
                 text-align: center;
                 text-decoration: none;
-                padding: 4rem !important;
-                font-size: 4rem;
+                @include breakpoint(alpha){padding: 1.5rem; font-size: 1.2rem;}
+                @include breakpoint(beta){padding: 1.5rem; font-size: 1.2rem;}
+                @include breakpoint(gamma){padding: 1.5rem; font-size: 1.8rem;}
+                @include breakpoint(delta){font-weight: 200; padding: 2.5rem; font-size: 3.4rem;}
+                @include breakpoint(epsilon){font-weight: 200; padding: 2.7rem; font-size: 3.7rem;}
             }
             .thanksdescription {
                 font-weight: 200;
-                color: #FAFAFA;
-                text-align:center;   
-                font-size: 1.4rem;             
+                color: $offwhite;
+                text-align:center;          
+                @include breakpoint(alpha){text-align: left; font-size: 1rem; padding-bottom: 1.4rem;}
+                @include breakpoint(beta){text-align: left; font-size: 1rem; padding-bottom: 1.4rem;}
+                @include breakpoint(gamma){text-align: left; font-size: 1.3rem; padding-bottom: 1.4rem;}
+                @include breakpoint(delta){font-size: 1.5rem; padding-bottom:1.1rem;}
+                @include breakpoint(epsilon){font-size: 1.5rem; padding-bottom:1.2rem;}   
+            }
+            .state {
+                font-size:1rem;
+                font-weight:200;
+                text-align: left;
+                color: $offwhite;
+                padding-bottom:0.5rem;
+                @include breakpoint(alpha){font-size: 1rem;}
+                @include breakpoint(beta){font-size: 1rem;}
+                @include breakpoint(gamma){font-size: 1rem;}
+                @include breakpoint(delta){font-size:1.4rem;}
+                @include breakpoint(epsilon){font-size:1.4rem;}
+            }
+            .authName {
+                font-size:1rem;
+                font-weight:200;
+                text-align: left;
+                color: $offwhite;
+                padding-bottom:0.5rem;
+                @include breakpoint(alpha){font-size: 1rem;}
+                @include breakpoint(beta){font-size: 1rem; padding-bottom:0.2rem;}
+                @include breakpoint(gamma){font-size: 1rem;}
+                @include breakpoint(delta){font-size:1.4rem;}
+                @include breakpoint(epsilon){font-size:1.4rem;}                                
+            }
+            .date {
+                font-size:1rem;
+                font-weight:200;
+                text-align: left;
+                color: $offwhite;
+                padding-bottom:0.5rem;
+                @include breakpoint(alpha){font-size: 1rem;}
+                @include breakpoint(beta){font-size: 1rem;}
+                @include breakpoint(gamma){font-size: 1rem;}
+                @include breakpoint(delta){font-size:1.4rem;}
+                @include breakpoint(epsilon){font-size:1.4rem;}                                   
             }
             .version {
                 text-align:left;
+                @include breakpoint(alpha){display:none;}
                 .edition{
                     font-weight: 200;
                     text-align: left;
                     color: $offwhite;
-                    padding-top: 3rem;
-                    padding-bottom: 1.5rem;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    @include breakpoint(beta){font-size:1rem; padding-bottom: 0.3rem;}
+                    @include breakpoint(gamma){font-size:1.4rem; padding-bottom: 0.3rem;}
                 }
                 .list {
                     font-weight: 200;
                     text-align: left;                    
                     color: $offwhite;
                     line-height: 2rem;
+                    @include breakpoint(beta){line-height: 1.4rem; font-size: 1rem;}
+                    @include breakpoint(beta){line-height: 1.8rem; font-size: 1rem;}
                 }
             }
             .hoverMe {
@@ -330,22 +388,30 @@ header {
                 font-size: 200;
                 color: $offwhite;
                 font-size: 3rem;
-                padding-bottom: 2rem;
+                @include breakpoint(alpha){font-size: 1.5rem; padding-bottom: 1rem;}
+                @include breakpoint(beta){font-size: 1.2rem; padding-bottom: 1rem;}
+                @include breakpoint(gamma){font-size: 1.4rem; padding-bottom: 1.1rem;}
+                @include breakpoint(delta){font-size: 2.9rem; padding-bottom: 2.1rem;}
+                @include breakpoint(epsilon){font-size: 2.9rem; padding-bottom: 2.1rem;}    
             }
             .button {
                 text-align:center;
                 font-size: 2.1rem;
-                background: transparent;
-                border: 1px solid;
+                background: rgba(19, 20, 24, 0.5);
+                border: 2px solid $offwhite;
                 width: 275px;
                 height: 63px;
-                border-radius: 3px;
-                color: white;
-                margin : 2px auto 2px -21px;    
+                border-radius: 45px;
+                color: white;    
                 curson: pointer;  
                 @include transition(background 0.50s ease-in-out);
+                @include breakpoint(alpha){font-size: 1.1rem; width: 204px; height: 47px; margin: 2px -15px 2px -21px;}
+                @include breakpoint(beta){font-size: 0.9rem; width: 167px; height: 40px;}
+                @include breakpoint(gamma){width: 233px; height: 46px; margin: 2px -7px 2px -21px;}
+                @include breakpoint(delta){font-size: 2.5rem; width: 300px; height: 88px; margin : 2px auto 2px -21px; padding: 1.1rem;}
+                @include breakpoint(epsilon){font-size: 2.5rem; width: 300px; height: 88px; margin : 2px auto 2px -21px; padding: 1.1rem;}
                 &:hover {
-                    background: $black;
+                    background: $lessrose;
                 }     
             }
         }

@@ -78,14 +78,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
  */
 /** Decorations
  */
-/* line 59, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 html, body {
   padding: 0;
   margin: 0;
   height: 100%;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 html {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -93,12 +93,12 @@ html {
   text-rendering: optimizelegibility;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 73, ../sass/screen.scss */
 body {
   font-size: 1.3em;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 77, ../sass/screen.scss */
 .circular-image, .site2 main .icon1 .image1, .site2 main .icon2 .image2, .site2 main .icon3 .image3 {
   height: 175px;
   width: 175px;
@@ -113,18 +113,32 @@ body {
   position: relative;
   margin: 0px auto 50px;
 }
+@media only screen and (max-width: 320px) {
+  /* line 77, ../sass/screen.scss */
+  .circular-image, .site2 main .icon1 .image1, .site2 main .icon2 .image2, .site2 main .icon3 .image3 {
+    height: 129px;
+    width: 129px;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 77, ../sass/screen.scss */
+  .circular-image, .site2 main .icon1 .image1, .site2 main .icon2 .image2, .site2 main .icon3 .image3 {
+    height: 153px;
+    width: 147px;
+  }
+}
 
-/* line 91, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 .hrLine {
   display: block;
   width: 35px;
   margin: 25px auto;
-  border: 2px solid #F24153;
+  border: 2px solid #FF3B5B;
 }
 
 /** Decorations
  */
-/* line 101, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 header {
   height: 100%;
   position: relative;
@@ -135,7 +149,7 @@ header {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 108, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 header .content {
   background: black;
   background: rgba(0, 0, 0, 0.5);
@@ -146,291 +160,314 @@ header .content {
   bottom: 0;
   z-index: 1;
 }
-/* line 116, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 header .main-heading {
   color: #FFFFFF;
   text-align: center;
   font-weight: 400;
 }
 @media only screen and (max-width: 320px) {
-  /* line 116, ../sass/screen.scss */
+  /* line 119, ../sass/screen.scss */
   header .main-heading {
     padding-top: 8rem;
     font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 640px) {
-  /* line 116, ../sass/screen.scss */
+  /* line 119, ../sass/screen.scss */
   header .main-heading {
     padding-top: 7.5rem;
     font-size: 2.6rem;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  /* line 116, ../sass/screen.scss */
+  /* line 119, ../sass/screen.scss */
   header .main-heading {
     padding-top: 6rem;
     font-size: 5rem;
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  /* line 116, ../sass/screen.scss */
+  /* line 119, ../sass/screen.scss */
   header .main-heading {
     padding-top: 6.5rem;
     font-size: 5.8rem;
   }
 }
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
-  /* line 116, ../sass/screen.scss */
+  /* line 119, ../sass/screen.scss */
   header .main-heading {
     padding-top: 6.0rem;
     font-size: 6.4rem;
   }
 }
-/* line 126, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 header .tagline {
   text-align: center;
 }
-/* line 128, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 header .tagline .tagline1 {
   color: #FFFFFF;
   font-weight: 400;
 }
 @media only screen and (max-width: 320px) {
-  /* line 128, ../sass/screen.scss */
+  /* line 131, ../sass/screen.scss */
   header .tagline .tagline1 {
     font-size: 1.6rem;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 640px) {
-  /* line 128, ../sass/screen.scss */
+  /* line 131, ../sass/screen.scss */
   header .tagline .tagline1 {
     font-size: 2.7rem;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  /* line 128, ../sass/screen.scss */
+  /* line 131, ../sass/screen.scss */
   header .tagline .tagline1 {
     font-size: 5rem;
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  /* line 128, ../sass/screen.scss */
+  /* line 131, ../sass/screen.scss */
   header .tagline .tagline1 {
     font-size: 5.5rem;
   }
 }
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
-  /* line 128, ../sass/screen.scss */
+  /* line 131, ../sass/screen.scss */
   header .tagline .tagline1 {
     font-size: 6.2rem;
   }
 }
-/* line 137, ../sass/screen.scss */
+/* line 140, ../sass/screen.scss */
 header .tagline .tagline2 {
-  color: #0FEB63;
+  color: #FF3B5B;
   font-weight: 400;
 }
 @media only screen and (max-width: 320px) {
-  /* line 137, ../sass/screen.scss */
+  /* line 140, ../sass/screen.scss */
   header .tagline .tagline2 {
     font-size: 1.6rem;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 640px) {
-  /* line 137, ../sass/screen.scss */
+  /* line 140, ../sass/screen.scss */
   header .tagline .tagline2 {
     font-size: 2.7rem;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  /* line 137, ../sass/screen.scss */
+  /* line 140, ../sass/screen.scss */
   header .tagline .tagline2 {
     font-size: 5rem;
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  /* line 137, ../sass/screen.scss */
+  /* line 140, ../sass/screen.scss */
   header .tagline .tagline2 {
     font-size: 5.5rem;
   }
 }
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
-  /* line 137, ../sass/screen.scss */
+  /* line 140, ../sass/screen.scss */
   header .tagline .tagline2 {
     font-size: 6.2rem;
   }
 }
-/* line 147, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 header .subTagline {
   color: #FFFFFF;
   text-align: center;
   font-weight: 400;
 }
 @media only screen and (max-width: 320px) {
-  /* line 147, ../sass/screen.scss */
+  /* line 150, ../sass/screen.scss */
   header .subTagline {
     font-size: 1.8rem;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 640px) {
-  /* line 147, ../sass/screen.scss */
+  /* line 150, ../sass/screen.scss */
   header .subTagline {
     font-size: 3rem;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  /* line 147, ../sass/screen.scss */
+  /* line 150, ../sass/screen.scss */
   header .subTagline {
     font-size: 5rem;
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  /* line 147, ../sass/screen.scss */
+  /* line 150, ../sass/screen.scss */
   header .subTagline {
     font-size: 5.4rem;
   }
 }
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
-  /* line 147, ../sass/screen.scss */
+  /* line 150, ../sass/screen.scss */
   header .subTagline {
     font-size: 6.0rem;
   }
 }
-/* line 157, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 header .edition {
   color: #FFFFFF;
   text-align: center;
   font-size: 400;
 }
 @media only screen and (max-width: 320px) {
-  /* line 157, ../sass/screen.scss */
+  /* line 160, ../sass/screen.scss */
   header .edition {
     padding-top: 2.5rem;
     font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 640px) {
-  /* line 157, ../sass/screen.scss */
+  /* line 160, ../sass/screen.scss */
   header .edition {
     padding-top: 2.4rem;
     font-size: 1.4rem;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  /* line 157, ../sass/screen.scss */
+  /* line 160, ../sass/screen.scss */
   header .edition {
     font-size: 1.8rem;
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  /* line 157, ../sass/screen.scss */
+  /* line 160, ../sass/screen.scss */
   header .edition {
     padding-top: 2.4rem;
     font-size: 2rem;
   }
 }
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
-  /* line 157, ../sass/screen.scss */
+  /* line 160, ../sass/screen.scss */
   header .edition {
     padding-top: 2.4rem;
     font-size: 2.6rem;
   }
 }
-/* line 167, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 header .authors {
   text-align: center;
 }
-/* line 169, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 header .authors .by {
   color: #FFFFFF;
 }
 @media only screen and (max-width: 320px) {
-  /* line 169, ../sass/screen.scss */
+  /* line 172, ../sass/screen.scss */
   header .authors .by {
     font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 640px) {
-  /* line 169, ../sass/screen.scss */
+  /* line 172, ../sass/screen.scss */
   header .authors .by {
     font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  /* line 169, ../sass/screen.scss */
+  /* line 172, ../sass/screen.scss */
   header .authors .by {
     font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  /* line 169, ../sass/screen.scss */
+  /* line 172, ../sass/screen.scss */
   header .authors .by {
     font-size: 1.6rem;
   }
 }
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
-  /* line 169, ../sass/screen.scss */
+  /* line 172, ../sass/screen.scss */
   header .authors .by {
     font-size: 2rem;
   }
 }
-/* line 177, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 header .authors .authName {
-  color: #0FEB63;
+  color: #FF3B5B;
 }
 @media only screen and (max-width: 320px) {
-  /* line 177, ../sass/screen.scss */
+  /* line 180, ../sass/screen.scss */
   header .authors .authName {
     padding-top: 2.2rem;
     font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 321px) and (max-width: 640px) {
-  /* line 177, ../sass/screen.scss */
+  /* line 180, ../sass/screen.scss */
   header .authors .authName {
     font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
-  /* line 177, ../sass/screen.scss */
+  /* line 180, ../sass/screen.scss */
   header .authors .authName {
     font-size: 1.5rem;
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  /* line 177, ../sass/screen.scss */
+  /* line 180, ../sass/screen.scss */
   header .authors .authName {
     font-size: 1.6rem;
   }
 }
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
-  /* line 177, ../sass/screen.scss */
+  /* line 180, ../sass/screen.scss */
   header .authors .authName {
     font-size: 2rem;
   }
 }
 
-/* line 189, ../sass/screen.scss */
-.site1 {
-  padding: 10em 0;
-  text-align: center;
-}
-
-/* line 199, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 .site2 .head {
   background-color: #222;
   height: 7rem;
 }
-/* line 202, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .site2 .head .headHeading {
-  font-size: 3rem;
   text-align: center;
   font-weight: 200;
-  color: #F24153;
+  color: #FF3B5B;
   padding-top: 1.5rem;
 }
-/* line 210, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 200, ../sass/screen.scss */
+  .site2 .head .headHeading {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 200, ../sass/screen.scss */
+  .site2 .head .headHeading {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  /* line 200, ../sass/screen.scss */
+  .site2 .head .headHeading {
+    font-size: 2.4rem;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* line 200, ../sass/screen.scss */
+  .site2 .head .headHeading {
+    font-size: 2.8rem;
+  }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  /* line 200, ../sass/screen.scss */
+  .site2 .head .headHeading {
+    font-size: 3rem;
+  }
+}
+/* line 212, ../sass/screen.scss */
 .site2 main {
   padding: 3.5em 0;
   max-width: 90%;
@@ -443,14 +480,48 @@ header .authors .authName {
   display: block;
   clear: both;
 }
-/* line 214, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 212, ../sass/screen.scss */
+  .site2 main {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 12, ../../../../home/deepak/.rvm/gems/ruby-2.1.5/gems/susy-2.2.0.beta.3/sass/susy/output/support/_clearfix.scss */
+  .site2 main:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+/* line 216, ../sass/screen.scss */
 .site2 main .icon1 {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
   text-align: center;
 }
-/* line 217, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 216, ../sass/screen.scss */
+  .site2 main .icon1 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 1.5rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 216, ../sass/screen.scss */
+  .site2 main .icon1 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 1.5rem;
+  }
+}
+/* line 221, ../sass/screen.scss */
 .site2 main .icon1 .image1 {
   background: url("../tasveer/zoom.png") no-repeat center;
   background-position: center;
@@ -459,31 +530,59 @@ header .authors .authName {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 223, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 .site2 main .icon1 .heading1 {
   padding-bottom: 1rem;
   font-size: 1.7rem;
   font-weight: 200;
-  color: #F24153;
+  color: #FF3B5B;
 }
-/* line 229, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 227, ../sass/screen.scss */
+  .site2 main .icon1 .heading1 {
+    font-size: 1rem;
+  }
+}
+/* line 234, ../sass/screen.scss */
 .site2 main .icon1 .description1 {
   padding-top: 0.7rem;
   color: #333;
-  word-break: normal;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  text-align: left;
 }
-/* line 236, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 234, ../sass/screen.scss */
+  .site2 main .icon1 .description1 {
+    font-size: 0.8rem;
+  }
+}
+/* line 241, ../sass/screen.scss */
 .site2 main .icon2 {
   width: 32.20339%;
   float: left;
   margin-right: 1.69492%;
   text-align: center;
 }
-/* line 239, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 241, ../sass/screen.scss */
+  .site2 main .icon2 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 1.5rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 241, ../sass/screen.scss */
+  .site2 main .icon2 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 1.5rem;
+  }
+}
+/* line 246, ../sass/screen.scss */
 .site2 main .icon2 .image2 {
   background: url("../tasveer/flip.png") no-repeat center;
   background-position: center;
@@ -492,31 +591,59 @@ header .authors .authName {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 245, ../sass/screen.scss */
+/* line 252, ../sass/screen.scss */
 .site2 main .icon2 .heading2 {
   padding-bottom: 1rem;
   font-size: 1.7rem;
   font-weight: 200;
-  color: #F24153;
+  color: #FF3B5B;
 }
-/* line 251, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 252, ../sass/screen.scss */
+  .site2 main .icon2 .heading2 {
+    font-size: 1rem;
+  }
+}
+/* line 259, ../sass/screen.scss */
 .site2 main .icon2 .description2 {
   padding-top: 0.7rem;
   color: #333;
-  word-break: normal;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  text-align: left;
 }
-/* line 258, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 259, ../sass/screen.scss */
+  .site2 main .icon2 .description2 {
+    font-size: 0.8rem;
+  }
+}
+/* line 266, ../sass/screen.scss */
 .site2 main .icon3 {
   width: 32.20339%;
   float: right;
   margin-right: 0;
   text-align: center;
 }
-/* line 261, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 266, ../sass/screen.scss */
+  .site2 main .icon3 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 1.5rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 266, ../sass/screen.scss */
+  .site2 main .icon3 {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 1.5rem;
+  }
+}
+/* line 271, ../sass/screen.scss */
 .site2 main .icon3 .image3 {
   background: url("../tasveer/content.png") no-repeat center;
   background-position: center;
@@ -525,25 +652,33 @@ header .authors .authName {
   -webkit-background-size: cover;
   background-size: cover;
 }
-/* line 267, ../sass/screen.scss */
+/* line 277, ../sass/screen.scss */
 .site2 main .icon3 .heading3 {
   padding-bottom: 1rem;
   font-size: 1.7rem;
   font-weight: 200;
-  color: #F24153;
+  color: #FF3B5B;
 }
-/* line 273, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 277, ../sass/screen.scss */
+  .site2 main .icon3 .heading3 {
+    font-size: 1rem;
+  }
+}
+/* line 284, ../sass/screen.scss */
 .site2 main .icon3 .description3 {
   padding-top: 0.7rem;
   color: #333;
-  word-break: normal;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  text-align: left;
+}
+@media only screen and (max-width: 320px) {
+  /* line 284, ../sass/screen.scss */
+  .site2 main .icon3 .description3 {
+    font-size: 0.8rem;
+  }
 }
 
-/* line 283, ../sass/screen.scss */
+/* line 294, ../sass/screen.scss */
 .site3 {
   height: 100%;
   position: relative;
@@ -555,7 +690,7 @@ header .authors .authName {
   background-size: cover;
   background-attachment: fixed;
 }
-/* line 290, ../sass/screen.scss */
+/* line 301, ../sass/screen.scss */
 .site3 .slide3layer {
   background: #262930;
   background: rgba(38, 41, 48, 0.5);
@@ -566,7 +701,7 @@ header .authors .authName {
   bottom: 0;
   z-index: 1;
 }
-/* line 296, ../sass/screen.scss */
+/* line 307, ../sass/screen.scss */
 .site3 .slide3layer .slide3description {
   max-width: 80%;
   margin-left: auto;
@@ -578,77 +713,375 @@ header .authors .authName {
   display: block;
   clear: both;
 }
-/* line 298, ../sass/screen.scss */
+/* line 309, ../sass/screen.scss */
 .site3 .slide3layer .slide3description .thanks {
-  font-weight: 200;
-  color: #FAFAFA;
+  color: #fafafa;
   text-align: center;
   text-decoration: none;
-  padding: 4rem !important;
-  font-size: 4rem;
 }
-/* line 306, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 309, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .thanks {
+    padding: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 309, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .thanks {
+    padding: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  /* line 309, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .thanks {
+    padding: 1.5rem;
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* line 309, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .thanks {
+    font-weight: 200;
+    padding: 2.5rem;
+    font-size: 3.4rem;
+  }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  /* line 309, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .thanks {
+    font-weight: 200;
+    padding: 2.7rem;
+    font-size: 3.7rem;
+  }
+}
+/* line 319, ../sass/screen.scss */
 .site3 .slide3layer .slide3description .thanksdescription {
   font-weight: 200;
-  color: #FAFAFA;
+  color: #fafafa;
   text-align: center;
-  font-size: 1.4rem;
 }
-/* line 312, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 319, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .thanksdescription {
+    text-align: left;
+    font-size: 1rem;
+    padding-bottom: 1.4rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 319, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .thanksdescription {
+    text-align: left;
+    font-size: 1rem;
+    padding-bottom: 1.4rem;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  /* line 319, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .thanksdescription {
+    text-align: left;
+    font-size: 1.3rem;
+    padding-bottom: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* line 319, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .thanksdescription {
+    font-size: 1.5rem;
+    padding-bottom: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  /* line 319, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .thanksdescription {
+    font-size: 1.5rem;
+    padding-bottom: 1.2rem;
+  }
+}
+/* line 329, ../sass/screen.scss */
+.site3 .slide3layer .slide3description .state {
+  font-size: 1rem;
+  font-weight: 200;
+  text-align: left;
+  color: #fafafa;
+  padding-bottom: 0.5rem;
+}
+@media only screen and (max-width: 320px) {
+  /* line 329, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .state {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 329, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .state {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  /* line 329, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .state {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* line 329, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .state {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  /* line 329, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .state {
+    font-size: 1.4rem;
+  }
+}
+/* line 341, ../sass/screen.scss */
+.site3 .slide3layer .slide3description .authName {
+  font-size: 1rem;
+  font-weight: 200;
+  text-align: left;
+  color: #fafafa;
+  padding-bottom: 0.5rem;
+}
+@media only screen and (max-width: 320px) {
+  /* line 341, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .authName {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 341, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .authName {
+    font-size: 1rem;
+    padding-bottom: 0.2rem;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  /* line 341, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .authName {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* line 341, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .authName {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  /* line 341, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .authName {
+    font-size: 1.4rem;
+  }
+}
+/* line 353, ../sass/screen.scss */
+.site3 .slide3layer .slide3description .date {
+  font-size: 1rem;
+  font-weight: 200;
+  text-align: left;
+  color: #fafafa;
+  padding-bottom: 0.5rem;
+}
+@media only screen and (max-width: 320px) {
+  /* line 353, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .date {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 353, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .date {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  /* line 353, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .date {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* line 353, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .date {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  /* line 353, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .date {
+    font-size: 1.4rem;
+  }
+}
+/* line 365, ../sass/screen.scss */
 .site3 .slide3layer .slide3description .version {
   text-align: left;
 }
-/* line 314, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 365, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .version {
+    display: none;
+  }
+}
+/* line 368, ../sass/screen.scss */
 .site3 .slide3layer .slide3description .version .edition {
   font-weight: 200;
   text-align: left;
   color: #fafafa;
-  padding-top: 3rem;
-  padding-bottom: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
-/* line 321, ../sass/screen.scss */
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 368, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .version .edition {
+    font-size: 1rem;
+    padding-bottom: 0.3rem;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  /* line 368, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .version .edition {
+    font-size: 1.4rem;
+    padding-bottom: 0.3rem;
+  }
+}
+/* line 377, ../sass/screen.scss */
 .site3 .slide3layer .slide3description .version .list {
   font-weight: 200;
   text-align: left;
   color: #fafafa;
   line-height: 2rem;
 }
-/* line 328, ../sass/screen.scss */
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 377, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .version .list {
+    line-height: 1.4rem;
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 377, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .version .list {
+    line-height: 1.8rem;
+    font-size: 1rem;
+  }
+}
+/* line 386, ../sass/screen.scss */
 .site3 .slide3layer .slide3description .hoverMe {
   text-align: center;
   font-size: 200;
   color: #fafafa;
   font-size: 3rem;
-  padding-bottom: 2rem;
 }
-/* line 335, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 386, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .hoverMe {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 386, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .hoverMe {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  /* line 386, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .hoverMe {
+    font-size: 1.4rem;
+    padding-bottom: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* line 386, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .hoverMe {
+    font-size: 2.9rem;
+    padding-bottom: 2.1rem;
+  }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  /* line 386, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .hoverMe {
+    font-size: 2.9rem;
+    padding-bottom: 2.1rem;
+  }
+}
+/* line 397, ../sass/screen.scss */
 .site3 .slide3layer .slide3description .button {
   text-align: center;
   font-size: 2.1rem;
-  background: transparent;
-  border: 1px solid;
+  background: rgba(19, 20, 24, 0.5);
+  border: 2px solid #fafafa;
   width: 275px;
   height: 63px;
-  border-radius: 3px;
+  border-radius: 45px;
   color: white;
-  margin: 2px auto 2px -21px;
   curson: pointer;
   -moz-transition: background 0.5s ease-in-out;
   -o-transition: background 0.5s ease-in-out;
   -webkit-transition: background 0.5s ease-in-out;
   transition: background 0.5s ease-in-out;
 }
-/* line 347, ../sass/screen.scss */
+@media only screen and (max-width: 320px) {
+  /* line 397, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .button {
+    font-size: 1.1rem;
+    width: 204px;
+    height: 47px;
+    margin: 2px -15px 2px -21px;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 640px) {
+  /* line 397, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .button {
+    font-size: 0.9rem;
+    width: 167px;
+    height: 40px;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  /* line 397, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .button {
+    width: 233px;
+    height: 46px;
+    margin: 2px -7px 2px -21px;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* line 397, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .button {
+    font-size: 2.5rem;
+    width: 300px;
+    height: 88px;
+    margin: 2px auto 2px -21px;
+    padding: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  /* line 397, ../sass/screen.scss */
+  .site3 .slide3layer .slide3description .button {
+    font-size: 2.5rem;
+    width: 300px;
+    height: 88px;
+    margin: 2px auto 2px -21px;
+    padding: 1.1rem;
+  }
+}
+/* line 413, ../sass/screen.scss */
 .site3 .slide3layer .slide3description .button:hover {
-  background: #222;
+  background: #F24153;
 }
 
-/* line 355, ../sass/screen.scss */
+/* line 421, ../sass/screen.scss */
 footer {
   background-color: #333;
   padding-bottom: 2.5rem;
 }
-/* line 358, ../sass/screen.scss */
+/* line 424, ../sass/screen.scss */
 footer .quote {
   text-align: center;
   text-decoration: none;
